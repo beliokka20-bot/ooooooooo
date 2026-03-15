@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Centre L'Horizon Thérapeutique</title>
+
+<!-- Font Awesome & Google Fonts -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+/* ===== Global ===== */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f4f7ff;color:#333;overflow-x:hidden;}
+
+/* ===== Header ===== */
+header{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:20px 8%;background:linear-gradient(90deg,#4a6cf7,#6f85ff);
+  color:white;box-shadow:0 5px 20px rgba(0,0,0,0.1);border-radius:0 0 20px 20px;
+  position:fixed;top:0;width:100%;z-index:1000;
+}
+header h2{font-weight:700;letter-spacing:1px;color:white;}
+nav a{color:white;margin-left:25px;font-weight:600;transition:0.3s;text-decoration:none;}
+nav a:hover{color:#ffe600;}
+
+
+/* ===== BACKGROUND PROFESSIONNEL RENDEZ-VOUS ===== */
+
+.contact{
+  position:relative;
+  padding:120px 10%;
+  margin:80px 5%;
+  border-radius:40px;
+  overflow:hidden;
+  background:linear-gradient(135deg,#4a6cf7,#6f85ff);
+  color:white;
+}
+
+/* forme lumineuse animée */
+
+.contact::before{
+  content:"";
+  position:absolute;
+  width:500px;
+  height:500px;
+  background:radial-gradient(circle,rgba(255,255,255,0.2),transparent 70%);
+  top:-150px;
+  left:-150px;
+  border-radius:50%;
+  animation:moveLight 12s infinite linear;
+}
+
+.contact::after{
+  content:"";
+  position:absolute;
+  width:400px;
+  height:400px;
+  background:radial-gradient(circle,rgba(255,255,255,0.15),transparent 70%);
+  bottom:-150px;
+  right:-150px;
+  border-radius:50%;
+  animation:moveLight 18s infinite linear;
+}
+
+/* contenu au dessus */
+
+.contact h2,
+#response-msg{
+  position:relative;
+  z-index:2;
+}
+
+/* animation */
+
+@keyframes moveLight{
+  0%{transform:translate(0,0);}
+  50%{transform:translate(40px,40px);}
+  100%{transform:translate(0,0);}
+}
+
+
+
+
+
+
+
+.fade-text{
+opacity:0;
+transform:translateY(40px);
+animation:fadeText 1.5s ease forwards;
+}
+
+.fade-text:nth-child(2){
+animation-delay:0.4s;
+}
+@keyframes fadeText{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+.hero{
+position:relative;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+
+background:url("images/bg1.jpg") center/cover no-repeat;
+animation:heroSlider 18s infinite;
+}
+
+/* تغيير الصور */
+
+
+
+
+/* ===== SECTION NOTRE EQUIPE ===== */
+
+.team{
+text-align:center;
+}
+
+/* grille moderne */
+
+.team .cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:35px;
+margin-top:40px;
+}
+
+/* carte */
+
+.team .card{
+background:white;
+padding:30px 20px;
+border-radius:25px;
+box-shadow:0 20px 45px rgba(0,0,0,0.15);
+transition:0.4s;
+position:relative;
+overflow:hidden;
+}
+
+/* hover */
+
+.team .card:hover{
+transform:translateY(-12px) scale(1.03);
+box-shadow:0 30px 65px rgba(0,0,0,0.25);
+}
+
+/* photo */
+
+.team .card img{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:15px;
+border:4px solid #4a6cf7;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* nom */
+
+.team .card h3{
+margin:10px 0 5px;
+font-size:20px;
+font-weight:600;
+color:#333;
+}
+
+/* métier */
+
+.team .card p{
+font-size:15px;
+color:#666;
+}
+
+/* ligne décorative */
+
+.team .card::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:6px;
+background:linear-gradient(90deg,#4a6cf7,#6f85ff);
+}
+.service-item{
+text-align:center;
+padding:30px;
+}
+
+.service-item i{
+font-size:40px;
+color:#4a6cf7;
+margin-bottom:15px;
+display:block;
+}
+
+.service-item{
+text-align:center;
+padding:30px;
+}
+
+.service-item i{
+font-size:40px;
+color:#4a6cf7;
+margin-bottom:15px;
+display:block;
+}
+
+
+
+
+
+/* ===== PROFESSIONAL BACKGROUND SECTIONS ===== */
+
+.services,
+.about,
+.team,
+.testimonials,
+.contact{
+  position:relative;
+  margin:70px 5%;
+  padding:100px 8%;
+  border-radius:40px;
+  background:linear-gradient(135deg,#438bab,#0a0a0bd2);
+  box-shadow:0 25px 60px rgba(0,0,0,0.08);
+  overflow:hidden;
+  transition:0.4s ease;
+}
+
+/* Decorative soft circles */
+.services::before,
+.about::before,
+.team::before,
+.testimonials::before,
+.contact::before{
+  content:"";
+  position:absolute;
+  width:350px;
+  height:350px;
+  background:radial-gradient(circle, rgba(74,108,247,0.15), transparent 70%);
+  top:-120px;
+  right:-120px;
+  border-radius:50%;
+  z-index:0;
+}
+
+/* Keep content above decoration */
+.services h2,
+.about h2,
+.team h2,
+.testimonials h2,
+.contact h2,
+.cards,
+.about-text,
+form,
+.testimonial{
+  position:relative;
+  z-index:1;
+}
+
+
+
+/* ===== INFO CONTACT CARD ===== */
+
+.info-section{
+padding:90px 10%;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+/* carte */
+
+.info-card{
+
+background:white;
+
+max-width:650px;
+
+display:flex;
+gap:30px;
+
+padding:40px;
+
+border-radius:25px;
+
+box-shadow:0 20px 50px rgba(0,0,0,0.15);
+
+transition:0.4s ease;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/* effet hover */
+
+.info-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 30px 70px rgba(0,0,0,0.2);
+
+}
+
+/* numéro décoratif */
+
+.info-card .number{
+
+font-size:70px;
+
+font-weight:700;
+
+color:#4a6cf7;
+
+opacity:0.15;
+
+}
+
+/* contenu */
+
+.info-card .content{
+
+font-size:16px;
+
+line-height:1.7;
+
+}
+
+/* liste */
+
+.info-card ul{
+
+list-style:none;
+
+padding:0;
+
+}
+
+.info-card li{
+
+margin-bottom:10px;
+
+}
+
+/* liens */
+
+.info-card a{
+
+color:#4a6cf7;
+
+text-decoration:none;
+
+font-weight:500;
+
+}
+
+.info-card a:hover{
+
+text-decoration:underline;
+
+}
+
+/* bouton rendez-vous */
+
+.rdv{
+
+display:inline-block;
+
+margin-top:15px;
+
+padding:12px 25px;
+
+background:linear-gradient(90deg,#4a6cf7,#6f85ff);
+
+color:white !important;
+
+border-radius:30px;
+
+font-weight:600;
+
+text-decoration:none;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+
+transition:0.3s;
+
+}
+
+.rdv:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 15px 35px rgba(0,0,0,0.25);
+
+}
+
+
+
+
+/* Subtle hover effect */
+.services:hover,
+.about:hover,
+.team:hover,
+.testimonials:hover,
+.contact:hover{
+  transform:translateY(-5px);
+  box-shadow:0 35px 80px rgba(0,0,0,0.12);
+}
+
+.services{
+  background:url("https://images.unsplash.com/photo-1580281658628-9c4b5a0a7f4a") center/cover no-repeat;
+  color:rgb(22, 10, 10);
+}
+
+.services::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:hsla(192, 88%, 35%, 0.598);
+}
+
+
+/* ===== BACKGROUND ANIME TEMOIGNAGES ===== */
+
+.testimonials{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(120deg,hsla(192, 88%, 35%, 0.598),#6f85ff);
+  color:white;
+}
+
+/* bulles animées */
+
+.testimonials::before,
+.testimonials::after{
+  content:"";
+  position:absolute;
+  width:600px;
+  height:600px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.08);
+  animation:moveBackground 18s infinite linear;
+}
+
+.testimonials::before{
+  top:-200px;
+  left:-200px;
+}
+
+.testimonials::after{
+  bottom:-200px;
+  right:-200px;
+  animation-duration:25s;
+}
+/* ===== ZONE ETOILES ===== */
+
+.rating-section{
+padding:100px 10%;
+text-align:center;
+background:linear-gradient(135deg,#4a6cf7,#6f85ff);
+color:white;
+border-radius:40px;
+margin:80px 5%;
+}
+
+.rating-section h2{
+margin-bottom:20px;
+}
+
+.rating{
+direction:rtl;
+unicode-bidi:bidi-override;
+font-size:40px;
+margin:20px 0;
+}
+
+.rating input{
+display:none;
+}
+
+.rating label{
+color:#ccc;
+cursor:pointer;
+transition:0.3s;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label{
+color:#ffd700;
+}
+
+.rating-section textarea{
+width:100%;
+max-width:500px;
+padding:15px;
+border-radius:15px;
+border:none;
+margin-top:20px;
+}
+
+.rating-section button{
+margin-top:20px;
+padding:14px 30px;
+border:none;
+border-radius:30px;
+background:white;
+color:#4a6cf7;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.rating-section button:hover{
+transform:scale(1.05);
+}
+/* animation */
+
+@keyframes moveBackground{
+  0%{
+    transform:translate(0,0);
+  }
+  50%{
+    transform:translate(60px,60px);
+  }
+  100%{
+    transform:translate(0,0);
+  }
+}
+
+/* texte au dessus */
+
+.testimonials h2,
+.testimonial{
+  position:relative;
+  z-index:2;
+}
+
+
+
+/* ===== Hero avec vidéo ===== */
+.hero{
+  position:relative;height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:white;
+}
+.hero video{
+  position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-1;opacity:0.7;
+}
+.hero h1{font-size:48px;margin-bottom:20px;animation:fadeUp 1s ease;}
+.hero p{max-width:600px;margin-bottom:30px;font-size:1.2rem;line-height:1.5;}
+.btn{
+  padding:14px 30px;background:linear-gradient(90deg,#4a6cf7,#6f85ff);
+  color:white;border-radius:50px;text-decoration:none;font-weight:600;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);transition:0.3s;
+}
+.btn:hover{transform:scale(1.1);background:linear-gradient(90deg,#6f85ff,#4a6cf7);}
+
+/* ===== Sections ===== */
+.services,.about,.team,.testimonials,.contact,.map{padding:80px 10%;}
+.services h2,.about h2,.team h2,.testimonials h2,.contact h2,.map h2{text-align:center;margin-bottom:50px;font-size:34px;}
+.cards{display:flex;flex-wrap:wrap;gap:30px;justify-content:center;}
+.card{background:white;padding:20px;width:300px;border-radius:25px;box-shadow:0 15px 35px rgba(0,0,0,0.15);transition:0.5s;position:relative;overflow:hidden;}
+.card:hover{transform:translateY(-15px) scale(1.05);box-shadow:0 25px 45px rgba(0,0,0,0.25);}
+.card img{width:100%;height:200px;object-fit:cover;border-radius:15px;margin-bottom:15px;transition:0.5s;}
+.card:hover img{transform:scale(1.1);}
+
+/* ===== About ===== */
+.about{display:flex;align-items:center;gap:50px;flex-wrap:wrap;}
+.about img{width:350px;border-radius:20px;box-shadow:0 20px 35px rgba(0,0,0,0.25);}
+.about-text{max-width:600px;font-size:1.1rem;line-height:1.6;}
+/* ===== BACKGROUND IMAGE NOTRE MISSION ===== */
+
+
+
+
+
+/* ===== OBJECTIFS STYLE PROFESSIONNEL ===== */
+
+.about-text{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+padding:40px;
+border-radius:25px;
+box-shadow:0 15px 40px rgba(0,0,0,0.25);
+}
+
+.objectifs{
+list-style:none;
+padding:0;
+margin-top:20px;
+}
+
+.objectifs li{
+margin-bottom:15px;
+padding-left:35px;
+position:relative;
+font-size:1.05rem;
+line-height:1.6;
+}
+
+/* icone check */
+
+.objectifs li::before{
+content:"✔";
+position:absolute;
+left:0;
+top:0;
+color:#6f85ff;
+font-weight:bold;
+font-size:18px;
+}
+
+
+
+
+
+
+
+.about{
+  position:relative;
+  display:flex;
+  align-items:center;
+  gap:50px;
+  flex-wrap:wrap;
+
+ background: url("11.png") center/cover no-repeat;
+  padding:120px 10%;
+  border-radius:40px;
+  margin:80px 5%;
+  color:rgb(12, 11, 11);
+  overflow:hidden;
+}
+
+/* overlay sombre pour lisibilité */
+
+.about::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+}
+
+/* contenu au dessus */
+
+.about img,
+.about-text{
+  position:relative;
+  z-index:2;
+}
+
+/* ===== Testimonials ===== */
+.testimonial{max-width:600px;margin:auto;margin-bottom:25px;font-style:italic;text-align:center;font-size:1.1rem;}
+
+/* ===== Form ===== */
+form{max-width:500px;margin:auto;display:flex;flex-direction:column;gap:15px;background:#fff;padding:40px;border-radius:25px;box-shadow:0 15px 40px rgba(0,0,0,0.15);transition:0.3s;}
+input,textarea{padding:15px;border-radius:15px;border:1px solid #ccc;transition:0.3s;}
+input:focus,textarea:focus{border-color:#4a6cf7;box-shadow:0 5px 20px rgba(74,108,247,0.2);outline:none;}
+button{padding:16px;border:none;background:#4a6cf7;color:white;border-radius:50px;cursor:pointer;box-shadow:0 10px 25px rgba(0,0,0,0.2);transition:0.3s;}
+button:hover{background:#6f85ff;transform:scale(1.05);}
+
+/* ===== Map ===== */
+.map iframe{border:0;border-radius:25px;box-shadow:0 15px 35px rgba(0,0,0,0.15);}
+/* ===== MAP MODERNE ===== */
+
+.map-frame{
+  width:100%;
+  height:450px;
+  border:0;
+  border-radius:30px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.2);
+  transition:0.4s ease;
+}
+
+/* Effet hover élégant */
+.map-frame:hover{
+  transform:scale(1.02);
+  box-shadow:0 30px 70px rgba(0,0,0,0.3);
+}
+
+/* Responsive mobile */
+@media(max-width:768px){
+  .map-frame{
+    height:350px;
+    border-radius:20px;
+  }
+}
+/* ===== Footer ===== */
+footer{background:#111;color:white;text-align:center;padding:30px;margin-top:40px;}
+.social{margin-top:15px;}
+.social a{background:#4a6cf7;color:white;padding:12px;border-radius:50%;margin:0 5px;display:inline-block;transition:0.3s;}
+.social a:hover{transform:scale(1.2);background:#6f85ff;}
+
+/* ===== WhatsApp ===== */
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;font-size:28px;padding:18px;border-radius:50%;box-shadow:0 5px 15px rgba(0,0,0,0.3);transition:0.3s;}
+.whatsapp:hover{transform:scale(1.2);}
+
+/* ===== Animations ===== */
+@keyframes fadeUp{from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:translateY(0);}}
+</style>
+</head>
+<body>
+<form action="save.php" method="POST"></form>
+<form action="config.php" method="POST"></form>
+<form action="save_review.php" method="POST"></form>
+<form action="test_site.php" method="POST"></form>
+<form action="admin.php" method="POST"></form>
+<!-- Header -->
+<header>
+<h2 class="fade-text">Centre L'Horizon Thérapeutique</h2>
+
+<nav>
+<a href="#">Accueil</a>
+<a href="#services">Services</a>
+<a href="#team">Équipe</a>
+<a href="#contact">Rendez-vous</a>
+<a href="#map">Localisation</a>
+</nav>
+</header>
+
+<!-- Hero with Video Background -->
+<section class="hero">
+
+<video autoplay muted loop>
+  <source src="oui.mp4" type="video/mp4">
+</video>
+
+<h1 class="fade-text">Centre L'Horizon Thérapeutique</h1>
+<p class="fade-text">
+Accompagnement professionnel pour enfants et adultes.
+Communication • Langage • Rééducation
+</p>
+
+<a href="#contact" class="btn glow-btn">Prendre rendez-vous</a>
+
+</section>
+
+<!-- Services -->
+<section class="services" id="services">
+
+<h2>Nos Services</h2>
+
+<div class="cards">
+
+<div class="card service-item">
+<i class="fas fa-comments"></i>
+<h3>Orthophonie</h3>
+<p>Rééducation du langage oral et écrit.</p>
+</div>
+
+<div class="card service-item">
+<i class="fas fa-brain"></i>
+<h3>Psychologie</h3>
+<p>Accompagnement psychologique des enfants.</p>
+</div>
+
+<div class="card service-item">
+<i class="fas fa-hand-holding-heart"></i>
+<h3>Ergothérapie</h3>
+<p>Amélioration de l'autonomie et motricité.</p>
+</div>
+
+<div class="card service-item">
+<i class="fas fa-graduation-cap"></i>
+<h3>Éducation spécialisée</h3>
+<p>Accompagnement pédagogique adapté.</p>
+</div>
+
+<div class="card service-item">
+<i class="fas fa-users"></i>
+<h3>Ateliers thérapeutiques</h3>
+<p>Activités pour développer les compétences sociales.</p>
+</div>
+
+<div class="card service-item">
+<i class="fas fa-running"></i>
+<h3>Sport adapté</h3>
+<p>Activités physiques adaptées aux enfants.</p>
+</div>
+
+<div class="card service-item">
+<i class="fas fa-school"></i>
+<h3>Intégration scolaire</h3>
+<p>Soutien pour l’intégration à l’école.</p>
+</div>
+
+<div class="card service-item">
+<i class="fas fa-chalkboard-teacher"></i>
+<h3>Formation professionnels et accompagnement parental</h3>
+<p>Formation des professionnels et soutien aux parents.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- About -->
+<section class="about">
+
+<div class="about-text">
+
+<h2>Nos Objectifs</h2>
+
+<ul class="objectifs">
+
+<li>Offrir des services d’évaluation et de diagnostic précis des difficultés d’apprentissage et des troubles du développement.</li>
+
+<li>Mettre en place des programmes de rééducation individualisés adaptés aux besoins de chaque enfant.</li>
+
+<li>Développer les compétences langagières, communicatives, cognitives et motrices.</li>
+
+<li>Favoriser l’intégration scolaire et sociale des enfants.</li>
+
+<li>Organiser des ateliers thérapeutiques et éducatifs pour renforcer les compétences sociales.</li>
+
+<li>Former les professionnels paramédicaux et éducatifs dans les domaines spécialisés.</li>
+
+<li>Accompagner les parents et les conseiller pour soutenir leurs enfants au quotidien.</li>
+
+</ul>
+
+</div>
+</section>
+
+<!-- Team -->
+<section class="team" id="team">
+
+<h2>Notre Équipe</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="dr2.jpg">
+<h3>Dr Wejden Khammassi</h3>
+<p>Orthophoniste et fondatrice</p>
+</div>
+
+<div class="card">
+<img src="dr1.jpg">
+<h3>Dr Hend Gdoura</h3>
+<p>Orthophoniste et cofondatrice</p>
+</div>
+
+<div class="card">
+<img src="https://randomuser.me/api/portraits/women/68.jpg">
+<h3>Dr Lina</h3>
+<p>Ergothérapeute</p>
+</div>
+
+<div class="card">
+<img src="https://randomuser.me/api/portraits/men/41.jpg">
+<h3>Dr Youssef</h3>
+<p>Éducateur spécialisé</p>
+</div>
+
+<div class="card">
+<img src="https://randomuser.me/api/portraits/women/50.jpg">
+<h3>Dr Amira</h3>
+<p>Psychomotricienne</p>
+</div>
+
+<div class="card">
+<img src="https://randomuser.me/api/portraits/men/55.jpg">
+<h3>Dr Sami</h3>
+<p>Coach sport adapté</p>
+</div>
+
+<div class="card">
+<img src="https://randomuser.me/api/portraits/women/65.jpg">
+<h3>Dr Nour</h3>
+<p>Assistante thérapeutique</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials">
+<h2>Témoignages</h2>
+<p class="testimonial">"Grâce aux séances, mon enfant a beaucoup progressé."</p>
+<p class="testimonial">"Une équipe professionnelle et attentive."</p>
+</section>
+
+<!-- Contact Form -->
+<section class="contact" id="contact">
+
+<h2>Prendre rendez-vous</h2>
+
+<form action="save.php" method="POST">
+
+<input type="text" name="name" placeholder="Nom complet" required>
+
+<input type="email" name="email" placeholder="Email" required>
+
+<input type="tel" name="tel" placeholder="Téléphone" required>
+
+<textarea name="message" rows="4" placeholder="Votre message"></textarea>
+
+<button type="submit">Envoyer la demande</button>
+
+</form>
+<p id="response-msg"></p>
+
+</section>
+
+<!-- Map -->
+<section class="map" id="map">
+
+<h2>Notre Localisation</h2>
+
+<iframe
+class="map-frame"
+src="https://www.google.com/maps?q=P663+3CQ+El+Mourouj+Tunisia&output=embed"
+loading="lazy">
+</iframe>
+
+<br><br>
+
+<a href="https://maps.app.goo.gl/f2un8uRYHf6kskkh6?g_st=afm"
+target="_blank"
+class="btn">
+
+Ouvrir dans Google Maps
+
+</a>
+
+</section>
+<section class="info-section">
+
+<div class="info-card">
+
+<div class="number">10</div>
+
+<div class="content">
+
+<ul>
+
+<li><strong>Contactez-nous dès aujourd'hui :</strong></li>
+
+<li>📞 Téléphone : 
+<a href="tel:56213285">56.213.285</a>
+</li>
+
+<li>📧 Email : 
+<a href="mailto:lhorizontherapeutique@gmail.com">
+lhorizontherapeutique@gmail.com
+</a>
+</li>
+
+<li>📍 Adresse : Fathi, P653+XGC, El Mourouj</li>
+
+<li>
+<a class="rdv" href="#">Prendre rendez-vous</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="rating-section" id="rating">
+
+<h2>Donnez votre avis</h2>
+
+<p>Votre opinion est importante pour nous</p>
+
+<form action="save_review.php" method="POST">
+
+<input type="text" name="name" placeholder="Votre nom" required>
+
+<div class="rating">
+
+<input type="radio" name="stars" value="5" id="star5">
+<label for="star5">★</label>
+
+<input type="radio" name="stars" value="4" id="star4">
+<label for="star4">★</label>
+
+<input type="radio" name="stars" value="3" id="star3">
+<label for="star3">★</label>
+
+<input type="radio" name="stars" value="2" id="star2">
+<label for="star2">★</label>
+
+<input type="radio" name="stars" value="1" id="star1">
+<label for="star1">★</label>
+
+</div>
+
+<textarea name="comment" placeholder="Écrivez votre commentaire..." rows="4"></textarea>
+
+<button type="submit">Envoyer l'avis</button>
+
+</form>
+
+
+
+
+
+
+</section>
+<!-- Footer -->
+<footer>
+<p>© 2026 Centre L'Horizon Thérapeutique</p>
+<div class="social">
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-linkedin"></i></a>
+<a href="#"><i class="fab fa-whatsapp"></i></a>
+</div>
+</footer>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/21656213285" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+
+<!-- JS ScrollReveal -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script>
+const sr = ScrollReveal({distance:'50px',duration:1000,easing:'ease-out',reset:false});
+sr.reveal('.hero h1, .hero p, .btn',{origin:'bottom',interval:200});
+sr.reveal('.services h2',{origin:'top'});
+sr.reveal('.cards .card',{origin:'bottom',interval:200});
+sr.reveal('.about img',{origin:'left'});
+sr.reveal('.about-text',{origin:'right'});
+sr.reveal('.team h2',{origin:'top'});
+sr.reveal('.team .card',{origin:'bottom',interval:200});
+sr.reveal('.testimonials h2',{origin:'top'});
+sr.reveal('.testimonial',{origin:'bottom',interval:200});
+sr.reveal('.contact h2',{origin:'top'});
+sr.reveal('.map h2',{origin:'top'});
+sr.reveal('.map iframe',{origin:'bottom'});
+sr.reveal('footer p, .social a',{origin:'bottom',interval:100});
+sr.reveal('.whatsapp',{origin:'right',delay:500});
+</script>
+
+</body>
+
+</html>
+
+
+
+
